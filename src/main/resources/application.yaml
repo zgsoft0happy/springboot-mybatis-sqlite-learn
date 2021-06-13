@@ -1,0 +1,19 @@
+server:
+  port: 8989 # 端口号
+spring:
+  datasource:
+    url: jdbc:sqlite:/Users/yangyanbin/yang/workspace/opensource/springboot-mybatis-sqlite-learn/learn.db # 创建的sqlite数据库所在路径
+    username: # 因为没有用户名和密码，所以这两个参数就没有值
+    password:
+    driver-class-name: org.sqlite.JDBC # sqlite驱动
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.sqlite.hibernate.dialect.SQLiteDialect
+
+
+# mybatis配置
+mybatis:
+  mapper-locations: classpath:*Mapper.xml # 配置mapper.xml文件路径
+# mybatis 打印SQL, 配置后就会在控制台打印执行的SQL语句
+
